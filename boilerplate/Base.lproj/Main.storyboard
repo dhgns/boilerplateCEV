@@ -53,6 +53,7 @@
                         <segue destination="sXc-Wg-dQ3" kind="relationship" relationship="viewControllers" id="Ijf-62-ITv"/>
                         <segue destination="Nlo-Km-wHv" kind="relationship" relationship="viewControllers" id="pLe-0h-3WJ"/>
                         <segue destination="8OZ-OZ-oeI" kind="relationship" relationship="viewControllers" id="HDz-2K-GZd"/>
+                        <segue destination="2NR-Yb-zP6" kind="relationship" relationship="viewControllers" id="aea-bM-DI7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Esr-Cp-Pt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,13 +211,85 @@
             </objects>
             <point key="canvasLocation" x="625" y="1480"/>
         </scene>
+        <!--NavigationController-->
+        <scene sceneID="Ajq-AO-tqA">
+            <objects>
+                <navigationController id="2NR-Yb-zP6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NavigationController" image="tray" catalog="system" id="D75-FC-oBQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hIw-gP-g95">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dgy-vk-kC2" kind="relationship" relationship="rootViewController" id="Z6X-iy-h8y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5b8-Fo-E8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="1480"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="qzW-nP-FNK">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhH-69-pFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Dgy-vk-kC2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uK6-n4-PZY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="i9X-Pk-BhU">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i9X-Pk-BhU" id="qOS-D6-r76">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="I4L-N5-h2P" kind="showDetail" trigger="accessoryAction" id="dCp-3S-1yF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dgy-vk-kC2" id="SRR-e8-qv6"/>
+                            <outlet property="delegate" destination="Dgy-vk-kC2" id="Ctd-YO-tId"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LMe-KE-Mt3"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1477" y="2240"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yB7-fA-0AV">
+            <objects>
+                <viewController id="I4L-N5-h2P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddb-rM-t6L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A25-JW-12A"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzk-di-6sh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2399" y="2240"/>
+        </scene>
     </scenes>
     <resources>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="scribble" catalog="system" width="128" height="118"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
