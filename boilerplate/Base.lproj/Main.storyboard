@@ -32,11 +32,32 @@
                     </view>
                     <connections>
                         <segue destination="TgF-wl-1OR" kind="show" identifier="goToLogin" id="flB-Kh-KG4"/>
+                        <segue destination="VIQ-xQ-tof" kind="show" identifier="goToHome" id="8eg-Lw-kmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-264" y="-88"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZBk-a1-alI">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="VIQ-xQ-tof" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2Br-e7-xc4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BRx-9z-MlP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sXc-Wg-dQ3" kind="relationship" relationship="viewControllers" id="Ijf-62-ITv"/>
+                        <segue destination="Nlo-Km-wHv" kind="relationship" relationship="viewControllers" id="pLe-0h-3WJ"/>
+                        <segue destination="8OZ-OZ-oeI" kind="relationship" relationship="viewControllers" id="HDz-2K-GZd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esr-Cp-Pt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ql1-w5-lNP">
@@ -54,6 +75,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVU-tW-54o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="626" y="-88"/>
+        </scene>
+        <!--Primera-->
+        <scene sceneID="j4B-5B-Y6n">
+            <objects>
+                <viewController id="sXc-Wg-dQ3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baN-d2-J2h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z8E-83-tWu"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Primera" image="pencil" catalog="system" id="gO1-pC-pVi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPV-Zh-CgL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1010" y="1480"/>
+        </scene>
+        <!--Segunda-->
+        <scene sceneID="9jb-fd-1aq">
+            <objects>
+                <viewController id="Nlo-Km-wHv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wOF-Cw-qln">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sdo-KR-kwH"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Segunda" image="scribble" catalog="system" id="25D-ol-Kaq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIi-Mh-bPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="1480"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="81F-pT-BE1">
@@ -141,8 +194,27 @@
             </objects>
             <point key="canvasLocation" x="2346" y="-88"/>
         </scene>
+        <!--Items-->
+        <scene sceneID="3T6-5I-DS3">
+            <objects>
+                <viewController id="8OZ-OZ-oeI" userLabel="Items" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xic-Sm-73I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w6Y-bg-p2e"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tercera" image="trash.fill" catalog="system" id="1fw-7R-aFC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1EV-ZE-XTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="1480"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="scribble" catalog="system" width="128" height="118"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
